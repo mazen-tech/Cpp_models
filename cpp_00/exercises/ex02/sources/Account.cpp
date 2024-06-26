@@ -113,9 +113,10 @@ bool Account::makeWithdrawal(int withdrawal)
 
     // update account balance and number of withdrawals
     this->_amount -= withdrawal;
+
     if (checkAmount()) // check if withdrawal is valid
     {
-        this->_amount += withdrawal; // rollback the withdrawal
+        this->_amount += withdrawal; // rollback the withdrawal(in another word we will add back the amount of withdraw to the account again if its not valid)
         std::cout << "withdrawal:refused" << std::endl;
         return false;
     }
@@ -165,3 +166,9 @@ void Account::_displayTimestamp(void)
 	std::cout << std::setfill('0') << std::setw(2) << t_stmp->tm_min;
 	std::cout << std::setfill('0') << std::setw(2) << t_stmp->tm_sec << "] ";
 }
+
+/*setfill() --> set the fill char for padding the output 
+when the content is smaller than the spacified widt*/
+
+/*setw() --> specifies the minmum width for the next output fiels
+ensuring the content fits within the defined space*/

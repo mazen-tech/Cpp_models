@@ -23,34 +23,34 @@ public:
 
 	typedef Account		t;
 
-	static int	getNbAccounts( void );
-	static int	getTotalAmount( void );
-	static int	getNbDeposits( void );
-	static int	getNbWithdrawals( void );
-	static void	displayAccountsInfos( void );
+	static int	getNbAccounts( void );//static member function, returns total number of accounts
+	static int	getTotalAmount( void );//static member function returns total amount of money in all accounts
+	static int	getNbDeposits( void );//static member function retunrs total number of deposits
+	static int	getNbWithdrawals( void );//static member function retunrs total number of withdrawals
+	static void	displayAccountsInfos( void );//static member function displays information about all acounts
 
-	Account( int initial_deposit );
-	~Account( void );
+	Account( int initial_deposit );//constructor
+	~Account( void );//destructor 
 
-	void	makeDeposit( int deposit );
-	bool	makeWithdrawal( int withdrawal );
-	int		checkAmount( void ) const;
-	void	displayStatus( void ) const;
+	void	makeDeposit( int deposit );//function to deposit money
+	bool	makeWithdrawal( int withdrawal );//function to withdraw money
+	int		checkAmount( void ) const;//function to check amount of money in the accounts
+	void	displayStatus( void ) const;//display account current status
 
 
 private:
 
-	static int	_nbAccounts;
-	static int	_totalAmount;
-	static int	_totalNbDeposits;
-	static int	_totalNbWithdrawals;
+	static int	_nbAccounts;//variable to keep track of total number of accounts
+	static int	_totalAmount;//variable to keep track of total money across all accounts
+	static int	_totalNbDeposits;//variable to keep track of total number of deposits
+	static int	_totalNbWithdrawals;//variable to keep track of total number of withdrawals
 
 	static void	_displayTimestamp( void );
 
-	int				_accountIndex;
-	int				_amount;
-	int				_nbDeposits;
-	int				_nbWithdrawals;
+	int				_accountIndex;//member variable to store the index of the account
+	int				_amount;//member variable to store the current amount in the account
+	int				_nbDeposits;//member variable store the number of deposits made tot this account
+	int				_nbWithdrawals;//member variable store the number of withdrawal made from this account
 
 	Account( void );
 

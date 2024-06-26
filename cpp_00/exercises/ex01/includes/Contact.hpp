@@ -25,6 +25,7 @@
 #define GREEN "\033[1;32m" // Bold green color
 #define BOLD "\033[1m"     // Bold style
 
+//class contact that have all the data for the contect 
 class Contact
 {
 public:

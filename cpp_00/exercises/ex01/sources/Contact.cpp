@@ -20,9 +20,9 @@
 std::string PhoneBook::truncateString(const std::string &str)
 {
   static const int width = 10;
-  if (str.length() > width)
-    return str.substr(0, width - 1) + '.';
-  return str;
+  if (str.length() > width)//if string width > the defult 
+    return str.substr(0, width - 1) + '.';//we extract the first 9 chars of the str starting from index 0
+  return str;//retunr the new str after shorting it 
 }
 
 /*
@@ -30,13 +30,13 @@ std::string PhoneBook::truncateString(const std::string &str)
  */
 void PhoneBook::printMessage()
 {
-  std::cout << "#################### Phonebook ####################\n";
-  std::cout << "##                                               ##\n";
-  std::cout << "##     ADD - Add a new contact.                  ##\n";
-  std::cout << "##     SEARCH - Display contact info.            ##\n";
-  std::cout << "##     EXIT - Exit phonebook.                    ##\n";
-  std::cout << "##                                               ##\n";
-  std::cout << "###################################################\n";
+  std::cout << GREEN"#################### Phonebook ####################\n"RESET;
+  std::cout << GREEN"##                                               ##\n"RESET;
+  std::cout << GREEN"##     ADD - Add a new contact.                  ##\n"RESET;
+  std::cout << GREEN"##     SEARCH - Display contact info.            ##\n"RESET;
+  std::cout << GREEN"##     EXIT - Exit phonebook.                    ##\n"RESET;
+  std::cout << GREEN"##                                               ##\n"RESET;
+  std::cout << GREEN"###################################################\n"RESET;
 }
 
 /*
@@ -46,10 +46,16 @@ void PhoneBook::printMessage()
 void PhoneBook::clear()
 {
 #if defined _WIN32
-  system("cls");
+  system("cls");//cls calls the system command to clear the screen in windows
 #elif defined(__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
   system("clear");
 #elif defined(__APPLE__)
   system("clear");
 #endif
 }
+
+/*
+_win32 -> macro indicating the program is running on windows OS
+_linux_ -> macro indicating the program is running on linux os
+_Apple_ -> macro indicating the program is running on apple os
+*/

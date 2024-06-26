@@ -19,7 +19,8 @@
 class PhoneBook
 {
 public:
-  // constructor and destructor
+  // constructor -> initializes the phonebook object setting up initial state
+  // destructor ->clean up resources used by the phoneBook object
   PhoneBook();
   ~PhoneBook(){};
 

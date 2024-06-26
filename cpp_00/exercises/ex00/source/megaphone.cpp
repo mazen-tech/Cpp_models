@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jotavare <jotavare@student.42porto.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 16:51:34 by jotavare          #+#    #+#             */
-/*   Updated: 2024/04/03 16:51:35 by jotavare         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <iostream> // cout, endl
 #include <cctype>   // toupper
 
@@ -24,6 +12,9 @@
  * semantically it's used to store size or index of an array, but since argc is of
  * type int, I'll use int.
  */
+
+//here in this fucntion we iterating throw the str and changing all the 
+//lower case chars to upper case and then returning the str after changes
 std::string messageUpperCase(std::string message)
 {
     for (size_t i = 0; i < message.length(); ++i)

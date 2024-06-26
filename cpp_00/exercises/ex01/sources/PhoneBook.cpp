@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jotavare <jotavare@student.42porto.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/09 17:22:41 by pidsig            #+#    #+#             */
-/*   Updated: 2024/05/09 17:25:11 by jotavare         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../includes/PhoneBook.hpp"
 
 // constructor initializes the number of contacts to zero
@@ -102,10 +90,10 @@ void PhoneBook::searchContact()
     // ensure the input is valid (within range)
     if (std::cin.fail() || index >= numContacts || index < 0)
     {
-      std::cin.clear();
+      std::cin.clear();//to clear the error state if cin fails
       std::cin.ignore(INT_MAX, '\n');
       std::cout << "Invalid index. Insert an index between 0-"
-                << numContacts - 1 << "." << std::endl;
+                << numContacts - 1 << "." << std::endl;//num contact - 1 to continue the output stream
     }
 
     // if input is valid, display the contact and return
