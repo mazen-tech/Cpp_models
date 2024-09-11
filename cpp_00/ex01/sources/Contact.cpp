@@ -30,13 +30,13 @@ std::string PhoneBook::truncateString(const std::string &str)
  */
 void PhoneBook::printMessage()
 {
-  std::cout << GREEN"#################### Phonebook ####################\n"RESET;
-  std::cout << GREEN"##                                               ##\n"RESET;
-  std::cout << GREEN"##     ADD - Add a new contact.                  ##\n"RESET;
-  std::cout << GREEN"##     SEARCH - Display contact info.            ##\n"RESET;
-  std::cout << GREEN"##     EXIT - Exit phonebook.                    ##\n"RESET;
-  std::cout << GREEN"##                                               ##\n"RESET;
-  std::cout << GREEN"###################################################\n"RESET;
+  std::cout << GREEN <<"#################### Phonebook ####################\n" <<RESET;
+  std::cout << GREEN <<"##                                               ##\n" <<RESET;
+  std::cout << GREEN <<"##     ADD - Add a new contact.                  ##\n" <<RESET;
+  std::cout << GREEN <<"##     SEARCH - Display contact info.            ##\n" <<RESET;
+  std::cout << GREEN <<"##     EXIT - Exit phonebook.                    ##\n" <<RESET;
+  std::cout << GREEN <<"##                                               ##\n" <<RESET;
+  std::cout << GREEN <<"###################################################\n" <<RESET;
 }
 
 /*

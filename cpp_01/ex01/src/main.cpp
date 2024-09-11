@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    int nt = 2;
+    int nt = 5;
 
     Zombie *nzt = zombieHorde(nt, "FOO");
 
